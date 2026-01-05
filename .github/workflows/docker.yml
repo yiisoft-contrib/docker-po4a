@@ -2,7 +2,7 @@ name: Docker Image
 
 env:
   IMAGE: ghcr.io/yiisoft-contrib/po4a
-  TAG: 0.73
+  TAG: 0.74
 
 on:
   workflow_dispatch: ~
