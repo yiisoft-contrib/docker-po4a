@@ -1,5 +1,6 @@
 FROM alpine:3.23.2
 
+# hadolint ignore=DL3018
 RUN apk add --no-cache \
     perl \
     perl-yaml-tiny \
