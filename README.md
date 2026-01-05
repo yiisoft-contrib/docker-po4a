@@ -16,7 +16,7 @@ docker run --rm \
     --user $(id -u):$(id -g) \
     -v $(PWD):/src \
     -w /src \
-    ghcr.io/yiisoft-contrib/po4a:0.73 \
+    ghcr.io/yiisoft-contrib/po4a:0.74 \
     po4a.conf
 ```
 
