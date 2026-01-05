@@ -1,5 +1,9 @@
 name: Docker Image
 
+env:
+  IMAGE: ghcr.io/yiisoft-contrib/po4a
+  TAG: 0.73
+
 on:
   workflow_dispatch: ~
   workflow_run:
@@ -45,8 +49,8 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/phptg/scaffolder:latest
-          push: ${{ github.ref == 'refs/heads/master' && github.repository_owner == 'phptg' }}
+          tags: "$IMAGE:$TAG"
+          push: ${{ github.ref == 'refs/heads/master' }}
           labels: |
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
             org.opencontainers.image.created=${{ steps.timestamp.outputs.rfc3339 }}

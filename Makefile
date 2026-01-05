@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-IMAGE := ghcr.io/phptg/scaffolder
+IMAGE := ghcr.io/yiisoft-contrib/po4a
 TAG := 0.73
 
 build: ## Build the docker image
