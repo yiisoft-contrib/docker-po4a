@@ -14,5 +14,6 @@ RUN wget -nv https://github.com/mquinson/po4a/releases/download/v0.74/po4a-0.74.
     && rm po4a-0.74.tar.gz
 
 ENV PERL5LIB=/po4a/lib
+ENV PATH="/po4a:${PATH}"
 
-ENTRYPOINT [ "/po4a/po4a" ]
+ENTRYPOINT [ "po4a" ]
